@@ -12,8 +12,6 @@
   - 所有控制器均置于顶层命名空间，遵循 PSR-0 规范，使用 PEAR 命名风格进行前后台控制器分离。
   - 开发阶段引入了 laravel-debugbar。
   - 开发阶段使用了自定义的辅助工具包 Assists，部署后可以完全移除。
-- 此项目仅用于学习交流，有任何问题请发 [issues](https://github.com/5-say/laravel-4.1-simple-blog/issues)。
-- 2014-02-19 初始版本编写结束。
 
 ---
 
@@ -55,8 +53,6 @@
 <a name="install"></a>
 ### 安装方法
 
-[下载项目文件](https://github.com/5-say/laravel-4.1-simple-blog/archive/master.zip)
-
 使用 composer 进行安装
 
     composer install
@@ -65,7 +61,6 @@
 > Assist 包中存放着迁移文件，可配合开发辅助工具无缝切换至 MySql 等 laravel 支持的数据库。（工具 URI `/5-say` ）
 
 默认管理员账号密码：
-
     admin@demo.com
     111111
 
@@ -97,14 +92,3 @@
     - 调试工具栏
   - five-say/vendor-cleaner
     - vendor 目录清理
-
-<a name="assume-unchanged"></a>
-### 开发者私人信息保密方法
-
-实际开发中（类似邮件功能）需要开发者私人密码的文件，可以采用以下方法进行隐私保护。**请在命令行中使用**。
-
-    // 假设文件无改动，作用于版本库中已存在的文件。
-    // 此方法将确保本地文件不提交，并且版本库中此文件的变更无法影响本地文件。
-    git update-index --assume-unchanged app/config/mail.php
-    // 取消并恢复为普通文件
-    git update-index --no-assume-unchanged app/config/mail.php
